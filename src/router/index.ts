@@ -41,6 +41,11 @@ const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/chat',
+    component: () => import('@/pages/chat/ChatPage.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     path: '/logout',
     beforeEnter: async (to, from, next) => {
       const auth = useAuthStore()

@@ -33,8 +33,11 @@ const routeOptions = [
   { value: '/candidate', label: 'Кандидат' },
   { value: '/vacancies', label: 'Вакансии' },
   { value: '/physical-faces', label: 'Физические лица' },
+  { value: '/chat', label: 'Общий чат' },
   { value: '/admin', label: 'Панель администратора' },
+  { value: '/dev', label: 'Для разработчиков' },
   { value: '/logout', label: 'Выход' },
+  
 ]
 
 const dynamicPlaceholder = computed(() => {
@@ -49,6 +52,8 @@ const dynamicPlaceholder = computed(() => {
       return 'Физические лица'
     case '/settings':
       return 'Настройки аккаунта'
+    case '/chat':
+      return 'Общий чат'
     default:
       return 'Выберите страницу'
   }
@@ -56,6 +61,10 @@ const dynamicPlaceholder = computed(() => {
 
 function navigate(path) {
   if (path) {
+    if(path == "/dev"){
+      window.location.href = 'https://documenter.getpostman.com/view/22551972/2sB2x3otTq'
+      return
+    }
     router.push(path)
   }
 }

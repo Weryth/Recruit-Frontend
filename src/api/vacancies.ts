@@ -4,7 +4,7 @@ import { useAuthStore } from '@/stores/auth'
 export const fetchVacancies = async (query: string, recruiter?: string) => {
   const authStore = useAuthStore()
 
-  const response = await axios.get('http://localhost:3000/api/vacancies', {
+  const response = await axios.get('http://89.169.45.7:3000/api/vacancies', {
     headers: {
       Authorization: localStorage.getItem('acessToken'),
     },
@@ -21,7 +21,7 @@ export const createVacancy = async (data: any) => {
   const authStore = useAuthStore()
 
   const response = await axios.post(
-    'http://localhost:3000/api/vacancies/create',
+    'http://89.169.45.7:3000/api/vacancies/create',
     {
       vacancyName: data.vacancyName,
       vacancyDesc: data.vacancyDesc,
@@ -38,7 +38,7 @@ export const createVacancy = async (data: any) => {
   return response.data
 }
 export const updateVacancy = async (data: any) => {
-  const response = await axios.post('http://localhost:3000/api/vacancies/update', data, {
+  const response = await axios.post('http://89.169.45.7:3000/api/vacancies/update', data, {
     headers: {
       Authorization: localStorage.getItem('acessToken'),
     },

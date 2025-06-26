@@ -5,7 +5,7 @@ export const createCandidate = async (data: any) => {
   const authStore = useAuthStore()
 
   const response = await axios.post(
-    'http://localhost:3000/api/candidate/create',
+    'http://89.169.45.7:3000/api/candidate/create',
     {
       statusID: data.statusID,
       physicalFaceID: data.physicalFaceID,

@@ -4,7 +4,7 @@ import { useAuthStore } from '@/stores/auth'
 export const fetchCandidats = async (query: string, recruiter?: string) => {
   const authStore = useAuthStore()
 
-  const response = await axios.get('http://localhost:3000/api/candidate', {
+  const response = await axios.get('http://89.169.45.7:3000/api/candidate', {
     headers: {
       Authorization: localStorage.getItem('acessToken'),
     },
@@ -19,7 +19,7 @@ export const fetchCandidats = async (query: string, recruiter?: string) => {
 
 export const updateCandidate = async (data: any) => {
   const response = await axios.post(
-    'http://localhost:3000/api/candidate/update',
+    'http://89.169.45.7:3000/api/candidate/update',
     data,
     {
       headers: {
@@ -33,7 +33,7 @@ export const createRecruiter = async (data: any) => {
   const authStore = useAuthStore()
 
   const response = await axios.post(
-    'http://localhost:3000/api/auth/reg',
+    'http://89.169.45.7:3000/api/auth/reg',
     {
       email: data.email,
       password: data.password,
@@ -50,7 +50,7 @@ export const createRecruiter = async (data: any) => {
 }
 
 export const getCurUser = async () => {
-  const response = await axios.get('http://localhost:3000/api/auth/curUser', {
+  const response = await axios.get('http://89.169.45.7:3000/api/auth/curUser', {
     headers: {
       Authorization: localStorage.getItem('acessToken'),
     },

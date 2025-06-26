@@ -5,7 +5,7 @@ export const createStatus = async (data: any) => {
   const authStore = useAuthStore()
 
   const response = await axios.post(
-    'http://localhost:3000/api/statuses/create',
+    'http://89.169.45.7:3000/api/statuses/create',
     {
       statusName: data.statusName,
       statusDesc: data.statusDesc,

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const getStatsMounth = async () => {
-  const response = await axios.get('http://localhost:3000/api/stats/mounth', {
+  const response = await axios.get('http://89.169.45.7:3000/api/stats/mounth', {
     headers: {
       Authorization: localStorage.getItem('acessToken'),
     },
@@ -11,7 +11,7 @@ export const getStatsMounth = async () => {
 }
 
 export const getStatsStatus = async () => {
-  const response = await axios.get('http://localhost:3000/api/stats/statuses', {
+  const response = await axios.get('http://89.169.45.7:3000/api/stats/statuses', {
     headers: {
       Authorization: localStorage.getItem('acessToken'),
     },

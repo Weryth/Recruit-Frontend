@@ -4,7 +4,7 @@ import { useAuthStore } from '@/stores/auth'
 export const fetchPF = async (query: string, recruiter?: string) => {
   const authStore = useAuthStore()
 
-  const response = await axios.get('http://localhost:3000/api/physical-face', {
+  const response = await axios.get('http://89.169.45.7:3000/api/physical-face', {
     headers: {
       Authorization: localStorage.getItem('acessToken'),
     },
@@ -21,7 +21,7 @@ export const createPF = async (data: any) => {
   const authStore = useAuthStore()
 
   const response = await axios.post(
-    'http://localhost:3000/api/physical-face/create',
+    'http://89.169.45.7:3000/api/physical-face/create',
     {
       firsName: data.firsName,
       lastname: data.lastname,
@@ -43,7 +43,7 @@ export const createPF = async (data: any) => {
 
 export const updatePF= async (data: any) => {
   const response = await axios.post(
-    'http://localhost:3000/api/physical-face/update',
+    'http://89.169.45.7:3000/api/physical-face/update',
     {
       faceId: data.id,
       firsName: data.firsName,

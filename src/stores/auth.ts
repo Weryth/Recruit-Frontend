@@ -8,7 +8,7 @@ export const useAuthStore = defineStore('auth', {
   }),
   actions: {
     async login(email: string, password: string): Promise<boolean> {
-      const response = await fetch('http://localhost:3000/api/auth/login', {
+      const response = await fetch('http://89.169.45.7:3000/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ export const useAuthStore = defineStore('auth', {
         if (!token) return false
   
         try {
-          const res = await fetch('http://localhost:3000/api/auth', {
+          const res = await fetch('http://89.169.45.7:3000/api/auth', {
             method: 'GET',
             headers: {
               'Authorization': `${token}`
